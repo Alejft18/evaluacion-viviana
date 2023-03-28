@@ -45,12 +45,9 @@ public class servicioProducto {
 
     public ArrayList<Producto>totalPorProducto(){
         double total=0;
-        double descuento=0;
         for (int i=0; i<lista.size();i++){
-            descuento=lista.get(i).getPrecio() * lista.get(i).getCantidad();
-            total=(descuento-8)/100;
-            lista.get(i).setTotal(descuento);
-            lista.get(i).setDescuento(total);
+            total=lista.get(i).getPrecio() * lista.get(i).getCantidad();
+            lista.get(i).setTotal(total);
 
 
             lista.set(i,lista.get(i));
@@ -72,8 +69,28 @@ public class servicioProducto {
             lista.set(i,lista.get(i));
             x += total;
         }
-        return x + ((x*19)/100) - (x*8/100);
+        return x + ((x*19)/100);
 
+    }
+
+    public ArrayList<Producto>descuentoCategoria(String categoria){
+        ArrayList<Producto>buscar=new ArrayList<>();
+        double sub=0;
+        double descuento=0;
+        double total=0;
+        for (Producto producto:lista){
+            int i=0;
+            if (producto.getCategoria().equals(categoria)){
+                sub= lista.get(i).getPrecio() * lista.get(i).getCantidad();
+                descuento= sub*8/100;
+                total=sub-descuento;
+                lista.get(i).setDescuento(descuento);
+                lista.get(i).setTotal(total);
+                lista.set(i,lista.get(i));
+                buscar.add(producto);
+            }
+        }
+        return buscar;
     }
 
 }

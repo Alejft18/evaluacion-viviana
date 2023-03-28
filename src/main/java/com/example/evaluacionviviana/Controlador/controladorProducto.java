@@ -30,4 +30,9 @@ public class controladorProducto {
         return producto.total();
     }
 
+    @GetMapping("/descuentoCategoria/{categoria}")
+    public ArrayList<Producto> descuentoCategoria(@PathVariable("categoria") String categoria){
+        return producto.descuentoCategoria(categoria);
+    }
+
 }
