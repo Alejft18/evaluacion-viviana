@@ -16,7 +16,7 @@ public class servicioProducto {
         lista.add(new Producto(3,"Banano","Frutas",2000,1,0,0));
         lista.add(new Producto(4,"Frijol","Dispensa",4000,1,0,0));
         lista.add(new Producto(5,"Tomate","Verduras",800,3,0,0));
-        lista.add(new Producto(6,"Cebolla","Frutas",1000,2,0,0));
+        lista.add(new Producto(6,"Cebolla","Verduras",1000,2,0,0));
         lista.add(new Producto(7,"Lentaja","Dispensa",4200,2,0,0));
         lista.add(new Producto(8,"Pollo","Carnicos",20000,1,0,0));
         lista.add(new Producto(9,"Panela","Dispensa",3000,3,0,0));
@@ -78,8 +78,8 @@ public class servicioProducto {
         double sub=0;
         double descuento=0;
         double total=0;
+        int i=0;
         for (Producto producto:lista){
-            int i=0;
             if (producto.getCategoria().equals(categoria)){
                 sub= lista.get(i).getPrecio() * lista.get(i).getCantidad();
                 descuento= sub*8/100;
@@ -89,6 +89,7 @@ public class servicioProducto {
                 lista.set(i,lista.get(i));
                 buscar.add(producto);
             }
+            i+=1;
         }
         return buscar;
     }
