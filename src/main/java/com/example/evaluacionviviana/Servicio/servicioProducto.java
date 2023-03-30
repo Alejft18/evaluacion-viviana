@@ -89,4 +89,34 @@ public class servicioProducto {
         return buscar;
     }
 
+
+
+    public ArrayList<Producto> actualizarPrecioPorcentaje(String categoria, int porcentaje, String valor) {
+        ArrayList<Producto> listaPorcentajes=new ArrayList<>();
+        int valorFin=0;
+        int porceSub=0;
+        int i=0;
+        for (Producto pro : lista) {
+            if (pro.getCategoria().equals(categoria)) {
+                porceSub= (lista.get(i).getPrecio() * porcentaje)/100;
+
+                if (valor.equals("incrementa")){
+                    valorFin=lista.get(i).getPrecio()+porceSub;
+                    lista.get(i).setPrecio(valorFin);
+                    listaPorcentajes.add(pro);
+
+                } else if (valor.equals("disminuye")) {
+                    valorFin=lista.get(i).getPrecio()-porceSub;
+                    lista.get(i).setPrecio(valorFin);
+
+                    listaPorcentajes.add(pro);
+
+
+                }
+            }
+            i+=1;
+        }
+        return listaPorcentajes;
+    }
+
 }

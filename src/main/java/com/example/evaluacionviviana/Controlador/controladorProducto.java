@@ -35,4 +35,10 @@ public class controladorProducto {
         return producto.descuentoCategoria(categoria);
     }
 
+
+    @PostMapping("/actualizarPrecioPorcentaje")
+    public ArrayList<Producto> actualizarPrecioPorcentaje(@RequestParam String categoria, @RequestParam int porcentaje, @RequestParam String valor ){
+        return producto.actualizarPrecioPorcentaje(categoria,porcentaje,valor);
+    }
+
 }
