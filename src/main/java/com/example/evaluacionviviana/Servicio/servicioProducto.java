@@ -41,7 +41,7 @@ public class servicioProducto {
     public ArrayList<Producto>totalPorProducto(){
         double total=0;
         for (int i=0; i<lista.size();i++){
-            total=lista.get(i).getPrecio() * lista.get(i).getCantidad();
+            total=(lista.get(i).getPrecio() * lista.get(i).getCantidad()) - lista.get(i).getDescuento();
             lista.get(i).setTotal(total);
 
 
@@ -59,7 +59,7 @@ public class servicioProducto {
         double x=0;
 
         for (int i=0; i<lista.size();i++){
-            total= lista.get(i).getPrecio() * lista.get(i).getCantidad();
+            total= (lista.get(i).getPrecio() * lista.get(i).getCantidad()- lista.get(i).getDescuento());
             lista.get(i).setTotal(total);
             lista.set(i,lista.get(i));
             x += total;
