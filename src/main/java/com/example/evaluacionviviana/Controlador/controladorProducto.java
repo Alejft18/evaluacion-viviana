@@ -12,8 +12,8 @@ public class controladorProducto {
     servicioProducto producto=new servicioProducto();
 
     @PostMapping("/actualizarPrecio")
-    public String actualizarPrecio(@RequestBody Producto product){
-        return producto.actualizarPrecio(product);
+    public ArrayList<Producto> actualizarPrecio(@RequestParam int codigo, @RequestParam int precio){
+        return producto.actualizarPrecio(codigo,precio);
     }
 
     @GetMapping("/listarProductos")

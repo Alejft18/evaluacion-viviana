@@ -28,18 +28,13 @@ public class servicioProducto {
         return lista;
     }
 
-    public String actualizarPrecio(Producto p){
-        String mensaje="";
-        for (Producto pro : lista){
-            if (p.getCodigo()==pro.getCodigo()){
-                pro.setPrecio(p.getPrecio());
-                mensaje="Actualizacion exitosa";
-
-            }else {
-                mensaje="No se actualizó";
+    public ArrayList<Producto> actualizarPrecio(int codigo, int precio) {
+        for (Producto pro : lista) {
+            if (pro.getCodigo() == codigo) {
+                pro.setPrecio(precio);
             }
         }
-        return mensaje;
+        return lista;
     }
 
 
