@@ -1,0 +1,131 @@
+#container{
+    background-color: aquamarine;
+}
+
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    background-color: beige;
+    align-items: center;
+    width: 500px;
+    border-radius: 10px;
+
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(199, 195, 195, 0.557);
+}
+
+#envio{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#envio:hover{
+    background-color: blue;
+    color: azure;
+}
+
+#listar{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#listar:hover{
+    background-color: red;
+    color: white;
+}
+
+#contenedorBuscar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#buscar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#buscar:hover{
+    background-color: blue;
+    color: white;
+}
+
+#contenedorEliminar{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#eliminar, #buscarTipo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#eliminar:hover{
+    background-color: red;
+    color: white;
+}
+
+#buscarTipo:hover{
+    background-color: blue;
+    color: white;
+}
+
+#actualizar, #totalProductos, #totalPorProducto{
+    margin-bottom: 20px;
+}
+
+#actualizar:hover{
+    background-color: cornflowerblue;
+    color: black;
+}
+
+#totalProductos:hover{
+    background-color: green;
+    color: white;
+}
+
+#totalPorProducto:hover{
+    background-color: burlywood;
+
+}
+
+#formularioCategoria{
+    margin-top: 100px;
+}
+
+#busCategoria{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#busCategoria:hover{
+    background-color: cornflowerblue;
+}
+
+#formularioIncremento{
+    margin-top: 50px;
+}
+
